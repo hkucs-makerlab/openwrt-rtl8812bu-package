@@ -1,7 +1,8 @@
-diff -Naur rtl88x2bu-2022-04-19-b434bafd/Makefile rtl88x2bu-2022-04-19-b434bafd/Makefile
---- rtl88x2bu-2022-04-19-b434bafd/Makefile	2022-05-09 11:15:36.417233275 +0000
-+++ rtl88x2bu-2022-04-19-b434bafd/Makefile	2022-05-09 11:33:12.072036549 +0000
-@@ -1344,14 +1344,28 @@
+diff --git a/Makefile b/Makefile
+index 3b40445..68bd2ff 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1344,14 +1344,28 @@ ifeq ($(CONFIG_PLATFORM_I386_PC), y)
  ifeq ($(CONFIG_CONCURRENT_MODE), y)
  EXTRA_CFLAGS += -DCONFIG_CONCURRENT_MODE
  endif
@@ -30,7 +31,7 @@ diff -Naur rtl88x2bu-2022-04-19-b434bafd/Makefile rtl88x2bu-2022-04-19-b434bafd/
  INSTALL_PREFIX :=
  STAGINGMODDIR := /lib/modules/$(KVER)/kernel/drivers/staging
  endif
-@@ -2485,7 +2499,7 @@
+@@ -2485,7 +2499,7 @@ ifeq ($(CONFIG_RTL8723B), y)
  $(MODULE_NAME)-$(CONFIG_MP_INCLUDED)+= core/rtw_bt_mp.o
  endif
  
