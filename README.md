@@ -1,5 +1,5 @@
 # rtl88x2bu package for OpenWRT
-This was an attempt to get the driver for a USB3 Wifi adapter based on the **rtl8812bu** chipset.
+Driver for a USB3 Wi-Fi adapter based on the **rtl8812bu / rtl8822bu** chipsets
   
 **Tip: [select branch](https://github.com/erintera/openwrt-rtl8812bu-package/branches) for OpenWRT version you're using.**  
   
@@ -11,6 +11,14 @@ This was created using the rtl8812au-ct package as a guide (but it's not for 881
 
 ## Usage
 This is an OpenWRT package. Place this project's files in your OpenWRT source directory under `package/kernel/rtl88x2bu/` and run `make menuconfig` *from OpenWRT source directory* to include it in your build.  
+  
+**Reboot your OpenWRT device (with adapter connected) after installing driver.**  
 
 ## Kernel module parameters (for advanced users)
+Read https://github.com/morrownr/88x2bu-20210702/blob/6c2ca754ec23dcf67993f036e76cce562e1e329d/88x2bu.conf for parameters documentation  
+  
+**OpenWRT notes:**  
+- Use ``88x2bu`` , not ``options 88x2bu``
+- File location is ``/etc/modules.d/rtl88x2bu.conf`` , not ``/etc/modprobe.d/88x2bu.conf``
+  
 Example: add ``88x2bu rtw_drv_log_level=0 rtw_led_ctrl=0`` to **/etc/modules.d/rtl88x2bu.conf**
