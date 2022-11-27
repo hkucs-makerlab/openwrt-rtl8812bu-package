@@ -6,7 +6,7 @@ PKG_RELEASE=1
 PKG_LICENSE:=GPLv2
 PKG_LICENSE_FILES:=
 
-PKG_SOURCE_URL:=https://github.com/erintera/88x2bu-20210702
+PKG_SOURCE_URL:=https://github.com/morrownr/88x2bu-20210702
 
 PKG_MIRROR_HASH:=skip
 PKG_SOURCE_PROTO:=git
